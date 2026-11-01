@@ -1,0 +1,116 @@
+/* Cars Dealership — shared styles */
+:root {
+  --ink: #16202a;
+  --ink-soft: #2a3744;
+  --paper: #f1f4f3;
+  --panel: #ffffff;
+  --line: #d3dbd8;
+  --muted: #55646d;
+  --signal: #1b4dff;
+  --signal-dark: #1238c4;
+  --road: #f2b705;
+  --good: #17803d;
+  --bad: #b3261e;
+  --radius: 6px;
+  --font: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font); color: var(--ink); background: var(--paper); line-height: 1.55; }
+img { max-width: 100%; display: block; }
+a { color: var(--signal); }
+a:hover { color: var(--signal-dark); }
+:focus-visible { outline: 3px solid var(--road); outline-offset: 2px; }
+.wrap { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
+
+/* Header + navigation */
+.site-header { background: var(--ink); color: #fff; }
+.site-header .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 2rem; padding-block: .75rem; }
+.brand { font-weight: 800; font-size: 1.25rem; letter-spacing: -.01em; color: #fff; text-decoration: none; display: flex; align-items: center; gap: .6rem; }
+.brand::before { content: ""; width: 1.6rem; height: .5rem; background: var(--road); border-radius: 2px; }
+.main-nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin-right: auto; }
+.main-nav a, .nav-link { color: rgba(255,255,255,.82); text-decoration: none; padding: .45rem 0; border-bottom: 3px solid transparent; font-weight: 600; }
+.main-nav a:hover, .nav-link:hover { color: #fff; }
+.main-nav a.active { color: #fff; border-bottom-color: var(--road); }
+#auth-area { display: flex; align-items: center; gap: .9rem; min-height: 2.4rem; }
+.nav-user { font-weight: 700; color: var(--road); }
+
+/* Buttons */
+.btn { display: inline-block; font: inherit; font-weight: 700; padding: .55rem 1.1rem; border-radius: var(--radius); border: 2px solid var(--signal); background: var(--signal); color: #fff; cursor: pointer; text-decoration: none; }
+.btn:hover { background: var(--signal-dark); border-color: var(--signal-dark); color: #fff; }
+.btn:disabled { opacity: .6; cursor: progress; }
+.btn-accent { background: var(--road); border-color: var(--road); color: var(--ink); }
+.btn-accent:hover { background: #ffc61f; border-color: #ffc61f; color: var(--ink); }
+.btn-ghost { background: transparent; border-color: rgba(255,255,255,.55); color: #fff; }
+.btn-ghost:hover { background: rgba(255,255,255,.12); border-color: #fff; }
+.btn-outline { background: transparent; color: var(--signal); }
+.btn-outline:hover { background: var(--signal); color: #fff; }
+
+/* Hero with the road-marking divider */
+.hero { background: var(--ink-soft); color: #fff; padding: 3.5rem 0 3rem; position: relative; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; letter-spacing: -.03em; margin: 0 0 .75rem; max-width: 18ch; font-weight: 800; }
+.hero p { margin: 0; max-width: 56ch; color: rgba(255,255,255,.85); font-size: 1.1rem; }
+.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px;
+  background: repeating-linear-gradient(90deg, var(--road) 0 36px, transparent 36px 60px); }
+.hero-split .wrap { display: grid; gap: 2rem; align-items: center; grid-template-columns: 1fr; }
+@media (min-width: 800px) { .hero-split .wrap { grid-template-columns: 1.2fr 1fr; } }
+.hero-split img { border-radius: var(--radius); }
+
+/* Sections */
+main { padding-block: 2.25rem 3.5rem; }
+h2 { font-size: 1.6rem; letter-spacing: -.02em; margin: 0 0 1rem; }
+h3 { margin: 0 0 .25rem; font-size: 1.15rem; }
+.lead { font-size: 1.1rem; max-width: 65ch; }
+.muted { color: var(--muted); }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; }
+
+/* Dealer table + filter */
+.toolbar { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; margin-bottom: 1.25rem; }
+.toolbar label { font-weight: 700; display: block; margin-bottom: .25rem; }
+select, input[type=text], input[type=email], input[type=password], input[type=date], input[type=number], textarea {
+  font: inherit; padding: .6rem .7rem; border: 1px solid #aab6b2; border-radius: var(--radius); background: #fff; color: var(--ink); width: 100%; }
+.toolbar select { min-width: 14rem; width: auto; }
+.table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); }
+table { border-collapse: collapse; width: 100%; min-width: 640px; }
+th, td { text-align: left; padding: .75rem 1rem; border-bottom: 1px solid var(--line); }
+thead th { background: #e6ebe9; font-size: .95rem; }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover { background: #f7f9f8; }
+.status { padding: 1rem 0; color: var(--muted); }
+
+/* Reviews */
+.reviews { display: grid; gap: 1rem; margin-top: 1rem; }
+.review { background: var(--panel); border: 1px solid var(--line); border-left: 6px solid var(--line); border-radius: var(--radius); padding: 1rem 1.25rem; }
+.review.positive { border-left-color: var(--good); }
+.review.negative { border-left-color: var(--bad); }
+.review.neutral { border-left-color: var(--road); }
+.review header { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: .35rem; }
+.badge { font-size: .85rem; font-weight: 700; padding: .1rem .6rem; border-radius: 99px; border: 1px solid currentColor; }
+.badge.positive { color: var(--good); } .badge.negative { color: var(--bad); } .badge.neutral { color: #8a6500; }
+
+/* Forms */
+.form-card { max-width: 520px; margin-inline: auto; }
+.field { margin-bottom: 1rem; }
+.field label { font-weight: 700; display: block; margin-bottom: .25rem; }
+.row-2 { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+@media (max-width: 520px) { .row-2 { grid-template-columns: 1fr; } }
+.check { display: flex; gap: .6rem; align-items: center; font-weight: 600; }
+.check input { width: 1.2rem; height: 1.2rem; }
+.error { color: var(--bad); font-weight: 700; margin: .5rem 0; }
+.success { color: var(--good); font-weight: 700; }
+
+/* Team / contact cards */
+.grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.person { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.person img { width: 100%; aspect-ratio: 1; object-fit: cover; background: #dfe5e3; }
+.person .body { padding: 1rem 1.1rem 1.25rem; }
+.role { color: var(--signal); font-weight: 700; margin: 0 0 .5rem; }
+dl.details { display: grid; grid-template-columns: max-content 1fr; gap: .6rem 1.5rem; margin: 0; }
+dl.details dt { font-weight: 700; }
+dl.details dd { margin: 0; }
+.cols { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+@media (min-width: 800px) { .cols { grid-template-columns: 1fr 1fr; } }
+
+.site-footer { background: var(--ink); color: rgba(255,255,255,.75); padding: 1.5rem 0; font-size: .95rem; }
+.site-footer a { color: #fff; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+server/db.sqlite3
+server/staticfiles/
+.venv/
+venv/
+.env
+evidence/cookies.txt
+.DS_Store

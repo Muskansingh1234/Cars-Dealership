@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "name": "Priya Nair",
+    "dealership": 1,
+    "purchase": true,
+    "purchase_date": "2024-03-12",
+    "car_make": "Honda",
+    "car_model": "Pilot",
+    "car_year": 2023,
+    "review": "Fantastic services! The team was friendly, honest and the paperwork was smooth."
+  },
+  {
+    "id": 2,
+    "name": "Marcus Webb",
+    "dealership": 1,
+    "purchase": true,
+    "purchase_date": "2024-05-02",
+    "car_make": "Toyota",
+    "car_model": "RAV4",
+    "car_year": 2022,
+    "review": "Great selection and a quick purchase. I would recommend Sunflower Motors to any family."
+  },
+  {
+    "id": 3,
+    "name": "Elena Garcia",
+    "dealership": 1,
+    "purchase": false,
+    "purchase_date": "",
+    "car_make": "",
+    "car_model": "",
+    "car_year": null,
+    "review": "Visited twice and the follow-up was slow. Prices were fair but the wait was long."
+  },
+  {
+    "id": 4,
+    "name": "Tom Becker",
+    "dealership": 2,
+    "purchase": true,
+    "purchase_date": "2024-01-20",
+    "car_make": "Ford",
+    "car_model": "F-150",
+    "car_year": 2023,
+    "review": "Terrible experience. The salesperson was pushy and the final price was higher than quoted."
+  },
+  {
+    "id": 5,
+    "name": "Aisha Khan",
+    "dealership": 2,
+    "purchase": true,
+    "purchase_date": "2024-06-18",
+    "car_make": "Tesla",
+    "car_model": "Model Y",
+    "car_year": 2024,
+    "review": "Excellent staff, very knowledgeable about electric vehicles. Delivery was fast."
+  },
+  {
+    "id": 6,
+    "name": "Daniel Rivera",
+    "dealership": 3,
+    "purchase": true,
+    "purchase_date": "2024-02-09",
+    "car_make": "Chevrolet",
+    "car_model": "Equinox",
+    "car_year": 2021,
+    "review": "Good service and a clean showroom. They explained every fee clearly."
+  },
+  {
+    "id": 7,
+    "name": "Sofia Lindqvist",
+    "dealership": 4,
+    "purchase": true,
+    "purchase_date": "2023-11-30",
+    "car_make": "Nissan",
+    "car_model": "Rogue",
+    "car_year": 2022,
+    "review": "Not happy with the trade-in offer. The process was slow and disappointing."
+  },
+  {
+    "id": 8,
+    "name": "James O'Connor",
+    "dealership": 4,
+    "purchase": false,
+    "purchase_date": "",
+    "car_make": "",
+    "car_model": "",
+    "car_year": null,
+    "review": "Helpful team, answered all my questions about financing."
+  },
+  {
+    "id": 9,
+    "name": "Mei Tanaka",
+    "dealership": 5,
+    "purchase": true,
+    "purchase_date": "2024-04-14",
+    "car_make": "Toyota",
+    "car_model": "Camry",
+    "car_year": 2023,
+    "review": "Amazing dealership! Best car buying experience I have ever had."
+  },
+  {
+    "id": 10,
+    "name": "Robert Hughes",
+    "dealership": 6,
+    "purchase": true,
+    "purchase_date": "2024-07-01",
+    "car_make": "BMW",
+    "car_model": "X5",
+    "car_year": 2024,
+    "review": "The car was perfect but the paperwork took hours. Staff were polite."
+  },
+  {
+    "id": 11,
+    "name": "Chloe Martin",
+    "dealership": 7,
+    "purchase": true,
+    "purchase_date": "2024-03-03",
+    "car_make": "Mazda",
+    "car_model": "CX-5",
+    "car_year": 2022,
+    "review": "Awful follow-up after the sale. I had problems with the registration and nobody called back."
+  },
+  {
+    "id": 12,
+    "name": "Hiro Sato",
+    "dealership": 8,
+    "purchase": true,
+    "purchase_date": "2024-05-25",
+    "car_make": "Honda",
+    "car_model": "Accord",
+    "car_year": 2023,
+    "review": "Smooth, professional and transparent. Thank you to the whole team!"
+  },
+  {
+    "id": 13,
+    "name": "Nadia Petrova",
+    "dealership": 9,
+    "purchase": false,
+    "purchase_date": "",
+    "car_make": "",
+    "car_model": "",
+    "car_year": null,
+    "review": "Showroom was fine. Nothing special to report."
+  },
+  {
+    "id": 14,
+    "name": "Ethan Brooks",
+    "dealership": 10,
+    "purchase": true,
+    "purchase_date": "2024-02-28",
+    "car_make": "Subaru",
+    "car_model": "Outback",
+    "car_year": 2021,
+    "review": "Wonderful people and a great price on my Outback. Highly recommended."
+  },
+  {
+    "id": 15,
+    "name": "Lucia Fernandez",
+    "dealership": 11,
+    "purchase": true,
+    "purchase_date": "2024-06-06",
+    "car_make": "Hyundai",
+    "car_model": "Tucson",
+    "car_year": 2023,
+    "review": "Friendly welcome and no pressure. I loved the test drive experience."
+  },
+  {
+    "id": 16,
+    "name": "Omar Haddad",
+    "dealership": 13,
+    "purchase": true,
+    "purchase_date": "2024-04-01",
+    "car_make": "Ford",
+    "car_model": "Mustang",
+    "car_year": 2022,
+    "review": "Overpriced add-ons and a slow finance office. Would not buy here again."
+  }
+]

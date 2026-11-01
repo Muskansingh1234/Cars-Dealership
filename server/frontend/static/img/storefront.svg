@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Illustration of a car outside a dealership showroom">
+  <rect width="640" height="360" fill="#2a3744"/>
+  <rect x="40" y="70" width="560" height="190" fill="#3a4b5b"/>
+  <rect x="60" y="95" width="150" height="130" fill="#9fc3df"/><rect x="245" y="95" width="150" height="130" fill="#9fc3df"/><rect x="430" y="95" width="150" height="130" fill="#9fc3df"/>
+  <rect x="40" y="52" width="560" height="26" fill="#f2b705"/>
+  <rect y="260" width="640" height="100" fill="#16202a"/>
+  <path d="M0 320h640" stroke="#f2b705" stroke-width="4" stroke-dasharray="36 24"/>
+  <g transform="translate(205 190)">
+    <path d="M10 70 L10 48 Q12 36 30 32 L72 30 Q92 4 130 4 L176 4 Q206 6 222 32 L240 36 Q250 40 250 52 L250 70 Z" fill="#1b4dff"/>
+    <path d="M82 30 Q98 12 128 12 L158 12 L158 32 Z M168 12 L180 12 Q198 14 210 32 L168 32 Z" fill="#cfe0ff"/>
+    <circle cx="68" cy="74" r="22" fill="#0e1218"/><circle cx="68" cy="74" r="10" fill="#9aa7b0"/>
+    <circle cx="196" cy="74" r="22" fill="#0e1218"/><circle cx="196" cy="74" r="10" fill="#9aa7b0"/>
+    <rect x="238" y="46" width="12" height="8" fill="#f2b705"/>
+  </g>
+</svg>

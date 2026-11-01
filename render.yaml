@@ -1,0 +1,17 @@
+# Render.com Blueprint — "New > Blueprint" and pick this repository.
+services:
+  - type: web
+    name: cars-dealership
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /djangoapp/get_dealers
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ROOT_PASSWORD
+        sync: false        # you will be asked for it in the Render dashboard
+      - key: DEMO_PASSWORD
+        sync: false

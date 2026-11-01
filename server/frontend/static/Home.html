@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Cars Dealership</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="/">Cars Dealership</a><nav class="main-nav" aria-label="Main"><a class="active" href="/" aria-current="page">Home</a><a href="/dealers/">Dealers</a><a href="/about/">About Us</a><a href="/contact/">Contact Us</a></nav><div id="auth-area"></div></div></header>
+<section class="hero">
+  <div class="wrap">
+    <h1>Find a Cars Dealership branch near you</h1>
+    <p>Browse every branch across the country, read what customers say, and share your own experience.</p>
+  </div>
+</section>
+<main class="wrap">
+  <div class="toolbar">
+    <div>
+      <label for="state-filter">Filter by state</label>
+      <select id="state-filter"><option value="">All states</option></select>
+    </div>
+  </div>
+  <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th>ID</th><th>Dealer Name</th><th>City</th><th>Address</th><th>Zip</th><th>State</th>
+        <th id="review-col" hidden>Review Dealer</th>
+      </tr></thead>
+      <tbody id="dealer-rows"></tbody>
+    </table>
+  </div>
+  <p class="status" id="dealer-status" role="status">Loading dealerships…</p>
+</main>
+<footer class="site-footer"><div class="wrap">&copy; 2026 Cars Dealership &middot; 1200 Market Street, Wichita, KS 67202 &middot; <a href="mailto:support@carsdealership.example">support@carsdealership.example</a></div></footer>
+<script src="/static/js/app.js"></script>
+<script src="/static/js/home.js"></script>
+</body>
+</html>

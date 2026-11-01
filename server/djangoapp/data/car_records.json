@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Honda",
+    "description": "Honda vehicles available at Cars Dealership branches.",
+    "models": [
+      {
+        "name": "Pilot",
+        "type": "SUV",
+        "year": 2023
+      },
+      {
+        "name": "Accord",
+        "type": "Sedan",
+        "year": 2023
+      },
+      {
+        "name": "Civic",
+        "type": "Sedan",
+        "year": 2024
+      }
+    ]
+  },
+  {
+    "name": "Toyota",
+    "description": "Toyota vehicles available at Cars Dealership branches.",
+    "models": [
+      {
+        "name": "Camry",
+        "type": "Sedan",
+        "year": 2023
+      },
+      {
+        "name": "RAV4",
+        "type": "SUV",
+        "year": 2022
+      },
+      {
+        "name": "Corolla",
+        "type": "Sedan",
+        "year": 2024
+      }
+    ]
+  },
+  {
+    "name": "Ford",
+    "description": "Ford vehicles available at Cars Dealership branches.",
+    "models": [
+      {
+        "name": "F-150",
+        "type": "Truck",
+        "year": 2023
+      },
+      {
+        "name": "Explorer",
+        "type": "SUV",
+        "year": 2023
+      },
+      {
+        "name": "Mustang",
+        "type": "Coupe",
+        "year": 2022
+      }
+    ]
+  },
+  {
+    "name": "Chevrolet",
+    "description": "Chevrolet vehicles available at Cars Dealership branches.",
+    "models": [
+      {
+        "name": "Silverado",
+        "type": "Truck",
+        "year": 2023
+      },
+      {
+        "name": "Equinox",
+        "type": "SUV",
+        "year": 2021
+      },
+      {
+        "name": "Malibu",
+        "type": "Sedan",
+        "year": 2022
+      }
+    ]
+  },
+  {
+    "name": "Tesla",
+    "description": "Tesla vehicles available at Cars Dealership branches.",
+    "models": [
+      {
+        "name": "Model 3",
+        "type": "Sedan",
+        "year": 2024
+      },
+      {
+        "name": "Model Y",
+        "type": "SUV",
+        "year": 2024
+      }
+    ]
+  },
+  {
+    "name": "Nissan",
+    "description": "Nissan vehicles available at Cars Dealership branches.",
+    "models": [
+      {
+        "name": "Altima",
+        "type": "Sedan",
+        "year": 2023
+      },
+      {
+        "name": "Rogue",
+        "type": "SUV",
+        "year": 2022
+      }
+    ]
+  },
+  {
+    "name": "Subaru",
+    "description": "Subaru vehicles available at Cars Dealership branches.",
+    "models": [
+      {
+        "name": "Outback",
+        "type": "Wagon",
+        "year": 2021
+      },
+      {
+        "name": "Forester",
+        "type": "SUV",
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "BMW",
+    "description": "BMW vehicles available at Cars Dealership branches.",
+    "models": [
+      {
+        "name": "X5",
+        "type": "SUV",
+        "year": 2024
+      },
+      {
+        "name": "3 Series",
+        "type": "Sedan",
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "Mazda",
+    "description": "Mazda vehicles available at Cars Dealership branches.",
+    "models": [
+      {
+        "name": "CX-5",
+        "type": "SUV",
+        "year": 2022
+      },
+      {
+        "name": "Mazda3",
+        "type": "Hatchback",
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "Hyundai",
+    "description": "Hyundai vehicles available at Cars Dealership branches.",
+    "models": [
+      {
+        "name": "Tucson",
+        "type": "SUV",
+        "year": 2023
+      },
+      {
+        "name": "Elantra",
+        "type": "Sedan",
+        "year": 2024
+      }
+    ]
+  }
+]
