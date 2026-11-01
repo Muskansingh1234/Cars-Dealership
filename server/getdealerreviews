@@ -1,0 +1,5 @@
+﻿cURL command:
+curl.exe "http://127.0.0.1:8000/djangoapp/reviews/dealer/1"
+
+Output:
+{"status": 200, "reviews": [{"id": 1, "name": "Demo Customer", "dealership": 1, "review": "Excellent service and a great car buying experience.", "purchase": true, "purchase_date": "", "car_make": "Toyota", "car_model": "Camry", "car_year": 2024, "sentiment": "neutral"}]}

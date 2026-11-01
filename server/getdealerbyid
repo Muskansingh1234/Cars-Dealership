@@ -1,0 +1,5 @@
+﻿cURL command:
+curl.exe "http://127.0.0.1:8000/djangoapp/dealer/1"
+
+Output:
+{"status": 200, "dealer": [{"id": 1, "full_name": "Demo Motors", "short_name": "Demo Motors", "address": "123 Main Street", "city": "Detroit", "state": "Michigan", "st":"MI", "zip": "48201", "lat": 0.0, "long": 0.0}]}

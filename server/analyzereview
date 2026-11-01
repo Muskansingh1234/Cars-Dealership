@@ -1,0 +1,5 @@
+﻿cURL command:
+curl.exe "http://127.0.0.1:8000/djangoapp/analyze/Fantastic%20services"
+
+Output:
+{"text": "Fantastic services", "sentiment": "positive", "score": 1}

@@ -1,0 +1,8 @@
+﻿cURL command:
+curl.exe -X POST "http://127.0.0.1:8000/djangoapp/login" -H "Content-Type: application/json" --data-binary "@login.json"
+
+Request body:
+{"userName":"demo","password":"Demo@12345"}
+
+Output:
+{"userName": "demo", "status": "Authenticated"}

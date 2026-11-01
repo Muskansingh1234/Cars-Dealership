@@ -1,0 +1,457 @@
+Current runner version: '2.338.2'
+Runner Image Provisioner
+  Hosted Compute Agent
+  Version: 20261021.618
+  Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+  Build Date: 2026-10-21T00:45:21Z
+  Worker ID: {bd4782a0-b685-4336-be66-52a0479b6b50}
+  Region: centralus
+  Cloud: Azure
+Operating System
+  Ubuntu
+  24.04.5
+  LTS
+Runner Image
+  Image: ubuntu-24.04
+  Version: 20261025.353.1
+  Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+  Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+GITHUB_TOKEN Permissions
+  Contents: read
+  Metadata: read
+  Packages: read
+Secret source: Actions
+Cache mode: write
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+Complete job name: build-test-deploy-check
+0s
+Run actions/checkout@v4
+  with:
+    repository: Muskansingh1234/Cars-Dealership
+    token: ***
+    ssh-strict: true
+    ssh-user: git
+    persist-credentials: true
+    clean: true
+    sparse-checkout-cone-mode: true
+    fetch-depth: 1
+    fetch-tags: false
+    show-progress: true
+    lfs: false
+    submodules: false
+    set-safe-directory: true
+    allow-unsafe-pr-checkout: false
+Syncing repository: Muskansingh1234/Cars-Dealership
+Getting Git version info
+  Working directory is '/home/runner/work/Cars-Dealership/Cars-Dealership'
+  /usr/bin/git version
+  git version 2.56.0
+Temporarily overriding HOME='/home/runner/work/_temp/afbce78e-b38c-4f4e-9934-3a5248f2c9b3' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/Cars-Dealership/Cars-Dealership
+Deleting the contents of '/home/runner/work/Cars-Dealership/Cars-Dealership'
+Initializing the repository
+  /usr/bin/git init /home/runner/work/Cars-Dealership/Cars-Dealership
+  hint: Using 'master' as the name for the initial branch. This default branch name
+  hint: will change to "main" in Git 3.0. To configure the initial branch name
+  hint: to use in all of your new repositories, which will suppress this warning,
+  hint: call:
+  hint:
+  hint: 	git config --global init.defaultBranch <name>
+  hint:
+  hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+  hint: 'development'. The just-created branch can be renamed via this command:
+  hint:
+  hint: 	git branch -m <name>
+  hint:
+  hint: Disable this message with "git config set advice.defaultBranchName false"
+  Initialized empty Git repository in /home/runner/work/Cars-Dealership/Cars-Dealership/.git/
+  /usr/bin/git remote add origin https://github.com/Muskansingh1234/Cars-Dealership
+Disabling automatic garbage collection
+  /usr/bin/git config --local gc.auto 0
+Setting up auth
+  /usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+  /usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+  /usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+  /usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+  /usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+  /usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+  /usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Fetching the repository
+  /usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b0bf75a1ec5ee3db9b6e586d024c03ad421119bc:refs/remotes/origin/main
+  From https://github.com/Muskansingh1234/Cars-Dealership
+   * [new ref]         b0bf75a1ec5ee3db9b6e586d024c03ad421119bc -> origin/main
+Determining the checkout info
+/usr/bin/git sparse-checkout disable
+/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Checking out the ref
+  /usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+  Switched to a new branch 'main'
+  branch 'main' set up to track 'origin/main'.
+/usr/bin/git log -1 --format=%H
+b0bf75a1ec5ee3db9b6e586d024c03ad421119bc
+1s
+Run actions/setup-python@v5
+  with:
+    python-version: 3.12
+    cache: pip
+    cache-dependency-path: requirements.txt
+    check-latest: false
+    token: ***
+    update-environment: true
+    allow-prereleases: false
+    freethreaded: false
+Installed versions
+  (node:2126) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+  (Use `node --trace-deprecation ...` to show where the warning was created)
+  Successfully set up CPython (3.12.15)
+/opt/hostedtoolcache/Python/3.12.15/x64/bin/pip cache dir
+/home/runner/.cache/pip
+Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-8f83905139e95b4637f43a6cca512c3c1230fd17b150ad03ea9442284591dddd
+(node:2126) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Received 8609821 of 8609821 (100.0%), 19.0 MBs/sec
+Cache Size: ~8 MB (8609821 B)
+/usr/bin/tar -xf /home/runner/work/_temp/f99c12f9-ad57-491c-8ab2-513be373764b/cache.tzst -P -C /home/runner/work/Cars-Dealership/Cars-Dealership --use-compress-program unzstd
+Cache restored successfully
+Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-8f83905139e95b4637f43a6cca512c3c1230fd17b150ad03ea9442284591dddd
+3s
+Run python -m pip install --upgrade pip
+  python -m pip install --upgrade pip
+  pip install -r ../requirements.txt flake8
+  shell: /usr/bin/bash -e {0}
+  env:
+    pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+    PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+    Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (26.2.2)
+Collecting flake8
+  Using cached flake8-7.5.0-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting Django<5.3,>=4.2 (from -r ../requirements.txt (line 1))
+  Using cached django-5.2.18-py3-none-any.whl.metadata (4.1 kB)
+Collecting whitenoise<7,>=6.6 (from -r ../requirements.txt (line 2))
+  Using cached whitenoise-6.12.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting gunicorn<24,>=21.2 (from -r ../requirements.txt (line 3))
+  Using cached gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting asgiref>=3.8.1 (from Django<5.3,>=4.2->-r ../requirements.txt (line 1))
+  Using cached asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+Collecting sqlparse>=0.3.1 (from Django<5.3,>=4.2->-r ../requirements.txt (line 1))
+  Downloading sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+Collecting packaging (from gunicorn<24,>=21.2->-r ../requirements.txt (line 3))
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting mccabe<0.8.0,>=0.7.0 (from flake8)
+  Using cached mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting pycodestyle<2.16.0,>=2.15.0 (from flake8)
+  Using cached pycodestyle-2.15.0-py2.py3-none-any.whl.metadata (4.5 kB)
+Collecting pyflakes<4.2.0,>=4.1.0 (from flake8)
+  Using cached pyflakes-4.1.0-py2.py3-none-any.whl.metadata (3.7 kB)
+Using cached django-5.2.18-py3-none-any.whl (8.3 MB)
+Using cached whitenoise-6.12.0-py3-none-any.whl (20 kB)
+Using cached gunicorn-23.0.0-py3-none-any.whl (85 kB)
+Using cached flake8-7.5.0-py2.py3-none-any.whl (57 kB)
+Using cached mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Using cached pycodestyle-2.15.0-py2.py3-none-any.whl (31 kB)
+Using cached pyflakes-4.1.0-py2.py3-none-any.whl (66 kB)
+Using cached asgiref-3.13.0-py3-none-any.whl (27 kB)
+Downloading sqlparse-0.6.1-py3-none-any.whl (51 kB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Installing collected packages: whitenoise, sqlparse, pyflakes, pycodestyle, packaging, mccabe, asgiref, gunicorn, flake8, Django
+
+Successfully installed Django-5.2.18 asgiref-3.13.0 flake8-7.5.0 gunicorn-23.0.0 mccabe-0.7.0 packaging-26.3 pycodestyle-2.15.0 pyflakes-4.1.0 sqlparse-0.6.1 whitenoise-6.12.0
+0s
+Run flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+  flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+  shell: /usr/bin/bash -e {0}
+  env:
+    pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+    PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+    Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+0
+2s
+Run python manage.py makemigrations djangoapp --noinput
+  python manage.py makemigrations djangoapp --noinput
+  python manage.py check
+  shell: /usr/bin/bash -e {0}
+  env:
+    pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+    PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+    Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+No changes detected in app 'djangoapp'
+System check identified no issues (0 silenced).
+1s
+Run python manage.py migrate --noinput
+  python manage.py migrate --noinput
+  python manage.py seed
+  shell: /usr/bin/bash -e {0}
+  env:
+    pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+    PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+    Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, djangoapp, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying djangoapp.0001_initial... OK
+  Applying sessions.0001_initial... OK
+Seeded 14 dealers, 16 reviews, 10 makes, 24 models.
+2s
+Run python manage.py test --verbosity 2
+  python manage.py test --verbosity 2
+  shell: /usr/bin/bash -e {0}
+  env:
+    pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+    PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+    Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+Found 15 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: messages, staticfiles
+  Apply all migrations: admin, auth, contenttypes, djangoapp, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying djangoapp.0001_initial... OK
+test_add_review_requires_login_then_works (djangoapp.tests.ApiTests.test_add_review_requires_login_then_works) ... /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/django/core/handlers/base.py:61: UserWarning: No directory at: /home/runner/work/Cars-Dealership/Cars-Dealership/server/staticfiles/
+  mw_instance = middleware(adapted_handler)
+ok
+test_all_dealers (djangoapp.tests.ApiTests.test_all_dealers) ... ok
+test_analyze_endpoint (djangoapp.tests.ApiTests.test_analyze_endpoint) ... ok
+test_car_makes (djangoapp.tests.ApiTests.test_car_makes) ... ok
+test_dealer_by_id_and_404 (djangoapp.tests.ApiTests.test_dealer_by_id_and_404) ... ok
+test_dealer_reviews (djangoapp.tests.ApiTests.test_dealer_reviews) ... ok
+test_dealers_by_state_kansas (djangoapp.tests.ApiTests.test_dealers_by_state_kansas) ... ok
+test_login_logout_flow (djangoapp.tests.ApiTests.test_login_logout_flow) ... ok
+test_register (djangoapp.tests.ApiTests.test_register) ... ok
+test_seed_is_idempotent (djangoapp.tests.ApiTests.test_seed_is_idempotent) ... ok
+test_pages_render (djangoapp.tests.PageTests.test_pages_render) ... ok
+test_negation (djangoapp.tests.SentimentTests.test_negation) ... ok
+test_negative (djangoapp.tests.SentimentTests.test_negative) ... ok
+test_neutral (djangoapp.tests.SentimentTests.test_neutral) ... ok
+test_positive (djangoapp.tests.SentimentTests.test_positive) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.139s
+
+OK
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+  Applying sessions.0001_initial... OK
+System check identified no issues (0 silenced).
+Seeded 14 dealers, 16 reviews, 10 makes, 24 models.
+Seeded 14 dealers, 16 reviews, 10 makes, 24 models.
+1s
+Run python manage.py runserver 127.0.0.1:8000 --noreload > server.log 2>&1 &
+  python manage.py runserver 127.0.0.1:8000 --noreload > server.log 2>&1 &
+  for i in $(seq 1 30); do curl -sf http://127.0.0.1:8000/djangoapp/get_dealers >/dev/null && break; sleep 1; done
+  echo "--- get_dealers/Kansas";  curl -sf http://127.0.0.1:8000/djangoapp/get_dealers/Kansas
+  echo; echo "--- get_cars";       curl -sf http://127.0.0.1:8000/djangoapp/get_cars
+  echo; echo "--- analyze";        curl -sf "http://127.0.0.1:8000/djangoapp/analyze/Fantastic%20services"
+  echo; echo "--- About page";     curl -sf -o /dev/null -w "HTTP %{http_code}\n" http://127.0.0.1:8000/about/
+  echo "--- Contact page";         curl -sf -o /dev/null -w "HTTP %{http_code}\n" http://127.0.0.1:8000/contact/
+  shell: /usr/bin/bash -e {0}
+  env:
+    pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+    PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+    Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+--- get_dealers/Kansas
+{"status": 200, "dealers": [{"id": 1, "full_name": "Sunflower Motors", "short_name": "Sunflower", "address": "2410 Douglas Ave", "city": "Wichita", "state": "Kansas", "st": "KS", "zip": "67202", "lat": 37.6872, "long": -97.3301}, {"id": 2, "full_name": "Prairie Auto Group", "short_name": "Prairie", "address": "8800 Metcalf Ave", "city": "Overland Park", "state": "Kansas", "st": "KS", "zip": "66212", "lat": 38.9822, "long": -94.6708}, {"id": 3, "full_name": "Capitol City Cars", "short_name": "Capitol City", "address": "1500 SW Wanamaker Rd", "city": "Topeka", "state": "Kansas", "st": "KS", "zip": "66604", "lat": 39.0473, "long": -95.6752}]}
+--- get_cars
+{"CarModels": [{"CarModel": "3 Series", "CarMake": "BMW", "Type": "Sedan", "Year": 2023}, {"CarModel": "X5", "CarMake": "BMW", "Type": "SUV", "Year": 2024}, {"CarModel": "Equinox", "CarMake": "Chevrolet", "Type": "SUV", "Year": 2021}, {"CarModel": "Malibu", "CarMake": "Chevrolet", "Type": "Sedan", "Year": 2022}, {"CarModel": "Silverado", "CarMake": "Chevrolet", "Type": "Truck", "Year": 2023}, {"CarModel": "Explorer", "CarMake": "Ford", "Type": "SUV", "Year": 2023}, {"CarModel": "F-150", "CarMake": "Ford", "Type": "Truck", "Year": 2023}, {"CarModel": "Mustang", "CarMake": "Ford", "Type": "Coupe", "Year": 2022}, {"CarModel": "Accord", "CarMake": "Honda", "Type": "Sedan", "Year": 2023}, {"CarModel": "Civic", "CarMake": "Honda", "Type": "Sedan", "Year": 2024}, {"CarModel": "Pilot", "CarMake": "Honda", "Type": "SUV", "Year": 2023}, {"CarModel": "Elantra", "CarMake": "Hyundai", "Type": "Sedan", "Year": 2024}, {"CarModel": "Tucson", "CarMake": "Hyundai", "Type": "SUV", "Year": 2023}, {"CarModel": "CX-5", "CarMake": "Mazda", "Type": "SUV", "Year": 2022}, {"CarModel": "Mazda3", "CarMake": "Mazda", "Type": "Hatchback", "Year": 2023}, {"CarModel": "Altima", "CarMake": "Nissan", "Type": "Sedan", "Year": 2023}, {"CarModel": "Rogue", "CarMake": "Nissan", "Type": "SUV", "Year": 2022}, {"CarModel": "Forester", "CarMake": "Subaru", "Type": "SUV", "Year": 2023}, {"CarModel": "Outback", "CarMake": "Subaru", "Type": "Wagon", "Year": 2021}, {"CarModel": "Model 3", "CarMake": "Tesla", "Type": "Sedan", "Year": 2024}, {"CarModel": "Model Y", "CarMake": "Tesla", "Type": "SUV", "Year": 2024}, {"CarModel": "Camry", "CarMake": "Toyota", "Type": "Sedan", "Year": 2023}, {"CarModel": "Corolla", "CarMake": "Toyota", "Type": "Sedan", "Year": 2024}, {"CarModel": "RAV4", "CarMake": "Toyota", "Type": "SUV", "Year": 2022}]}
+--- analyze
+{"text": "Fantastic services", "sentiment": "positive", "score": 1}
+--- About page
+HTTP 200
+--- Contact page
+HTTP 200
+7s
+Run docker build -t cars-dealership:b0bf75a1ec5ee3db9b6e586d024c03ad421119bc .
+  docker build -t cars-dealership:b0bf75a1ec5ee3db9b6e586d024c03ad421119bc .
+  shell: /usr/bin/bash -e {0}
+  env:
+    pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+    PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+    Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 394B done
+#1 DONE 0.0s
+
+#2 [auth] library/python:pull token for registry-1.docker.io
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.12-slim
+#3 DONE 0.7s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 123B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 81.07kB done
+#5 DONE 0.0s
+
+#6 [1/6] FROM docker.io/library/python:3.12-slim@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159
+#6 resolve docker.io/library/python:3.12-slim@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159 done
+#6 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 1.05MB / 29.86MB 0.1s
+#6 sha256:3eb77115150676568f88e2957181b8f7e3014e797f1ce8cd640086dfbed45e35 0B / 1.29MB 0.1s
+#6 sha256:f574edac59d9f092df596f54e5b52656c803fd3ae30825b8ee5a189ed05f63d3 0B / 12.12MB 0.1s
+#6 sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159 10.37kB / 10.37kB done
+#6 sha256:1148dbb014615300fa7e713b2f94f550c0d1c69780c0805f84f093ceee34dd0b 1.75kB / 1.75kB done
+#6 sha256:ae4e8b7c575fabea88a029b6cae757f342ca2525e07f7c22272d5105c346b35e 5.66kB / 5.66kB done
+#6 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 28.31MB / 29.86MB 0.2s
+#6 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 29.86MB / 29.86MB 0.4s
+#6 sha256:3eb77115150676568f88e2957181b8f7e3014e797f1ce8cd640086dfbed45e35 1.29MB / 1.29MB 0.3s
+#6 sha256:f574edac59d9f092df596f54e5b52656c803fd3ae30825b8ee5a189ed05f63d3 12.12MB / 12.12MB 0.4s
+#6 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 29.86MB / 29.86MB 0.4s done
+#6 sha256:3eb77115150676568f88e2957181b8f7e3014e797f1ce8cd640086dfbed45e35 1.29MB / 1.29MB 0.4s done
+#6 sha256:f574edac59d9f092df596f54e5b52656c803fd3ae30825b8ee5a189ed05f63d3 12.12MB / 12.12MB 0.4s done
+#6 extracting sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 0.1s
+#6 sha256:acca7542dfc736e9ce20cbefc58b2d09822276d15d4a0c531531a6f1b057928e 251B / 251B 0.5s done
+#6 extracting sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 0.6s done
+#6 extracting sha256:3eb77115150676568f88e2957181b8f7e3014e797f1ce8cd640086dfbed45e35 0.1s done
+#6 extracting sha256:f574edac59d9f092df596f54e5b52656c803fd3ae30825b8ee5a189ed05f63d3
+#6 extracting sha256:f574edac59d9f092df596f54e5b52656c803fd3ae30825b8ee5a189ed05f63d3 0.3s done
+#6 extracting sha256:acca7542dfc736e9ce20cbefc58b2d09822276d15d4a0c531531a6f1b057928e
+#6 extracting sha256:acca7542dfc736e9ce20cbefc58b2d09822276d15d4a0c531531a6f1b057928e done
+#6 DONE 2.6s
+
+#7 [2/6] WORKDIR /app
+#7 DONE 0.0s
+
+#8 [3/6] COPY requirements.txt .
+#8 DONE 0.0s
+
+#9 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#9 1.027 Collecting Django<5.3,>=4.2 (from -r requirements.txt (line 1))
+#9 1.066   Downloading django-5.2.18-py3-none-any.whl.metadata (4.1 kB)
+#9 1.088 Collecting whitenoise<7,>=6.6 (from -r requirements.txt (line 2))
+#9 1.098   Downloading whitenoise-6.12.0-py3-none-any.whl.metadata (3.7 kB)
+#9 1.118 Collecting gunicorn<24,>=21.2 (from -r requirements.txt (line 3))
+#9 1.128   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+#9 1.149 Collecting asgiref>=3.8.1 (from Django<5.3,>=4.2->-r requirements.txt (line 1))
+#9 1.159   Downloading asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+#9 1.177 Collecting sqlparse>=0.3.1 (from Django<5.3,>=4.2->-r requirements.txt (line 1))
+#9 1.187   Downloading sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+#9 1.207 Collecting packaging (from gunicorn<24,>=21.2->-r requirements.txt (line 3))
+#9 1.216   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#9 1.228 Downloading django-5.2.18-py3-none-any.whl (8.3 MB)
+#9 1.292    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 191.5 MB/s eta 0:00:00
+#9 1.302 Downloading whitenoise-6.12.0-py3-none-any.whl (20 kB)
+#9 1.314 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+#9 1.324 Downloading asgiref-3.13.0-py3-none-any.whl (27 kB)
+#9 1.335 Downloading sqlparse-0.6.1-py3-none-any.whl (51 kB)
+#9 1.347 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#9 1.399 Installing collected packages: whitenoise, sqlparse, packaging, asgiref, gunicorn, Django
+#9 2.788 Successfully installed Django-5.2.18 asgiref-3.13.0 gunicorn-23.0.0 packaging-26.3 sqlparse-0.6.1 whitenoise-6.12.0
+#9 2.788 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#9 2.874 
+#9 2.874 [notice] A new release of pip is available: 25.0.1 -> 26.2.2
+#9 2.874 [notice] To update, run: pip install --upgrade pip
+#9 DONE 3.2s
+
+#10 [5/6] COPY server/ /app/server/
+#10 DONE 0.0s
+
+#11 [6/6] WORKDIR /app/server
+#11 DONE 0.0s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.9s done
+#12 writing image sha256:5cf3e7e365cae81ac570e98e47fb26bb2cb6c9361116431b069a8ad6e92fb335 done
+#12 naming to docker.io/library/cars-dealership:b0bf75a1ec5ee3db9b6e586d024c03ad421119bc done
+#12 DONE 0.9s
+0s
+Run echo "CI finished successfully for commit $GITHUB_SHA"
+  echo "CI finished successfully for commit $GITHUB_SHA"
+  shell: /usr/bin/bash -e {0}
+  env:
+    pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+    PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+    Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+    LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+CI finished successfully for commit b0bf75a1ec5ee3db9b6e586d024c03ad421119bc
+0s
+Post job cleanup.
+Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-8f83905139e95b4637f43a6cca512c3c1230fd17b150ad03ea9442284591dddd, not saving cache.
+(node:2403) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+1s
+Post job cleanup.
+/usr/bin/git version
+git version 2.56.0
+Temporarily overriding HOME='/home/runner/work/_temp/29e806fe-554e-4e68-8091-a92351932343' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/Cars-Dealership/Cars-Dealership
+/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+0s
+Cleaning up orphan processes
+Terminate orphan process: pid (2226) (python)
+Warning: Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-2

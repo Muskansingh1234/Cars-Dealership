@@ -1,0 +1,5 @@
+﻿cURL command:
+curl.exe "http://127.0.0.1:8000/djangoapp/get_cars"
+
+Output:
+{"CarModels": [{"CarModel": "Explorer", "CarMake": "Ford", "Type": "SUV", "Year": 2024}, {"CarModel": "Civic", "CarMake": "Honda", "Type": "Sedan", "Year": 2024}, {"CarModel": "Camry", "CarMake": "Toyota", "Type": "Sedan", "Year": 2024}]}

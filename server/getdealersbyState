@@ -1,0 +1,5 @@
+﻿cURL command:
+curl.exe "http://127.0.0.1:8000/djangoapp/get_dealers/Kansas"
+
+Output:
+{"status": 200, "dealers": [{"id": 2, "full_name": "Kansas Demo Motors", "short_name": "Kansas Demo Motors", "address": "100 Main Street", "city": "Wichita", "state": "Kansas", "st": "KS", "zip": "67202", "lat": 0.0, "long": 0.0}]}
